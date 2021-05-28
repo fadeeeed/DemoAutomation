@@ -12,12 +12,13 @@ public class loginAssertions {
 	public void demoAssert() {
 		driver = new FirefoxDriver();
 		driver.get("https://www.google.com/");
-		System.out.println("Inside test");
+		
 		SoftAssert soft = new SoftAssert();
+		
+		
 		soft.assertEquals(driver.getCurrentUrl(), "https://www.google");
 		soft.assertAll();
 	}
-	
 	
 }
 

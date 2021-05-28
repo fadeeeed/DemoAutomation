@@ -22,7 +22,7 @@ public class AddProjectTest {
 	protected WebDriver driver;
 	protected Properties properties = config.initialize();
 	
-
+	@Test
 	public void f() {
 		LoginClassTest logginIn = new LoginClassTest();
 		driver = logginIn.login();

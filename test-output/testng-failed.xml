@@ -3,11 +3,11 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="com.automation.tests.loginAssertions">
+      <class name="com.automation.tests.AddProjectTest">
         <methods>
-          <include name="demoAssert"/>
+          <include name="f"/>
         </methods>
-      </class> <!-- com.automation.tests.loginAssertions -->
+      </class> <!-- com.automation.tests.AddProjectTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
