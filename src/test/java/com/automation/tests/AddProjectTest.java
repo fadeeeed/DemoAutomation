@@ -9,6 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -19,13 +21,15 @@ import com.automation.config.ConfigFileReader;
 
 public class AddProjectTest {
 	ConfigFileReader config = new ConfigFileReader();
-	protected WebDriver driver;
+	public WebDriver driver;
 	protected Properties properties = config.initialize();
 	
-	@Test
+	
 	public void f() {
 		LoginClassTest logginIn = new LoginClassTest();
-		driver = logginIn.login();
+		logginIn.login();
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
 	    driver.findElement(By.id("add-new-project")).click();
 	    //Adding Project
 	    String dLName = "Dummy";

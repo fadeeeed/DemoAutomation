@@ -3,8 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Add Project">
   	<classes>
-  		<class name="com.automation.tests.loginAssertions"/>
-  		<class name="com.automation.tests.AddProjectTest"/>
+  		<class name="com.automation.tests.HomePageTest"/>
   	</classes>
   </test>
 </suite> <!-- Suite -->

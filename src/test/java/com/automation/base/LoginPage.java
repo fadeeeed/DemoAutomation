@@ -19,9 +19,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.automation.config.ConfigFileReader;
 
-public class LoginClassTest {
+public class LoginPage {
 	
-	public WebDriver driver;
+	private WebDriver driver;
+	
+	
 	
 	@FindBy(xpath="/html/body/div/div[1]/div/div/div[2]/button")
 	WebElement loginToEngage;
@@ -38,15 +40,13 @@ public class LoginClassTest {
 	@FindBy(id="passwordNext")
 	WebElement passwordNext;
 	
-	
+	public LoginPage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
 	ConfigFileReader config = new ConfigFileReader();
 	protected Properties properties = config.initialize();
-	public WebDriver login() {
-	
-		driver = new ChromeDriver();
-		
-		PageFactory.initElements(driver,this);
-		
+	public void login() {
 		driver.get(properties.getProperty("url"));
 		
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS); 
@@ -61,6 +61,7 @@ public class LoginClassTest {
 	    
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	    
+		
 		while (iterator.hasNext()) {
 	    	String ChildWindow = iterator.next();
 	        
@@ -73,17 +74,14 @@ public class LoginClassTest {
 	        	
 	        	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	        	
-	        	//driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div[1]/div/div/div/div/div[1]/div/div[1]/input")).sendKeys(");
-	        	//password.sendKeys(properties.getProperty("password"));
+	 
 	        	new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(password)).sendKeys(properties.getProperty("password"));
-	        	passwordNext.click();
+	        	new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(passwordNext)).click();
+
+	     
 	        }
 	    }
 	    
-		
-	    driver.switchTo().window(mainWindowHandle);
-	    return driver;
-	    
-	    
-	}
+		driver.switchTo().window(mainWindowHandle);
+	 }
 }
