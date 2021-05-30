@@ -3,11 +3,14 @@
 <suite parallel="none" name="Failed suite [Suite]">
   <test parallel="none" name="Add Project(failed)">
     <classes>
-      <class name="com.automation.tests.loginAssertions">
+      <class name="com.automation.tests.OtherDetailsTest">
         <methods>
-          <include name="demoAssert"/>
+          <include name="loginAssertions"/>
+          <include name="beforeTest"/>
+          <include name="otherDetailsAssertions"/>
+          <include name="homePageAssertions"/>
         </methods>
-      </class> <!-- com.automation.tests.loginAssertions -->
+      </class> <!-- com.automation.tests.OtherDetailsTest -->
     </classes>
   </test> <!-- Add Project(failed) -->
 </suite> <!-- Failed suite [Suite] -->

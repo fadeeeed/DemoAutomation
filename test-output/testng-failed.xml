@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite parallel="none" name="Failed suite [Default suite]">
-  <test parallel="none" name="Default test(failed)">
+<suite parallel="none" name="Failed suite [Suite]">
+  <test parallel="none" name="Add Project(failed)">
     <classes>
-      <class name="com.automation.tests.HomePageTest">
+      <class name="com.automation.tests.OtherDetailsTest">
         <methods>
+          <include name="loginAssertions"/>
           <include name="beforeTest"/>
+          <include name="otherDetailsAssertions"/>
           <include name="homePageAssertions"/>
         </methods>
-      </class> <!-- com.automation.tests.HomePageTest -->
+      </class> <!-- com.automation.tests.OtherDetailsTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Add Project(failed) -->
+</suite> <!-- Failed suite [Suite] -->

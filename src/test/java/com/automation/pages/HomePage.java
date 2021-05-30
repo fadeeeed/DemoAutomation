@@ -1,4 +1,4 @@
-package com.automation.base;
+package com.automation.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,6 +16,10 @@ public class HomePage {
 		PageFactory.initElements(driver, this);
 	}
 	
+	public WebElement getAddNewProductButton() {
+		return addNewProductButton;
+	}
+
 	public void addNewProductButton() {
 		addNewProductButton.click();
 		System.out.println("Driver in homePage: "+this.driver);

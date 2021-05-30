@@ -1,4 +1,4 @@
-package com.automation.base;
+package com.automation.pages;
 
 
 
@@ -6,6 +6,7 @@ import java.util.Iterator;
 import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -17,13 +18,14 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.automation.base.BaseTest;
 import com.automation.config.ConfigFileReader;
 
 public class LoginPage {
 	
+	static Logger log = Logger.getLogger(BaseTest.class.getName());
+	
 	private WebDriver driver;
-	
-	
 	
 	@FindBy(xpath="/html/body/div/div[1]/div/div/div[2]/button")
 	WebElement loginToEngage;
@@ -45,9 +47,11 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);
 	}
 	ConfigFileReader config = new ConfigFileReader();
+	
 	protected Properties properties = config.initialize();
+	
 	public void login() {
-		driver.get(properties.getProperty("url"));
+		log.info("Started Loggin In");
 		
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS); 
 		
@@ -81,7 +85,7 @@ public class LoginPage {
 	     
 	        }
 	    }
-	    
+	    log.info("Login Successfull");
 		driver.switchTo().window(mainWindowHandle);
 	 }
 }

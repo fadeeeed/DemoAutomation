@@ -1,30 +1,29 @@
 package com.automation.tests;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.BeforeTest;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
-import com.automation.base.HomePage;
-import com.automation.base.LoginPage;
+import com.automation.pages.HomePage;
 
-public class HomePageTest {
-	private WebDriver driver;
+public class HomePageTest extends LoginTest {
 	
-	@BeforeTest
-	public void beforeTest() {
-		driver= new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	}
-	@Test
+	
+	@Test(priority=1)
 	public void homePageAssertions() {
-		LoginPage logginIn = new LoginPage(driver);
-		logginIn.login();
+		
 		HomePage home = new HomePage(driver);
+		SoftAssert soft = new SoftAssert();
+		
+		
+		soft.assertEquals(driver.getTitle(), "ENGAGE", "Title Doesn't Match");
+		
+		
+		Assert.assertEquals(home.getAddNewProductButton().isEnabled(), true, "Add New Product Button Is Not enabled");
 		home.addNewProductButton();
-		System.out.println("Driver in homeAssertion "+  driver.getCurrentUrl());
+		
+		soft.assertEquals(driver.getCurrentUrl(), "https://stage-engage.3pillarglobal.com/projects/add", "Url is not Invalid");
+		soft.assertAll();
+		
 	}
-	
 }
