@@ -1,7 +1,5 @@
 package com.automation.pages;
 
-import java.util.HashMap;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,12 +24,27 @@ public class LinkFromNetsuitePage {
 	@FindBy(name="cemEmail")
 	WebElement cemEmail;
 	
+	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[4]/button[1]")
+	WebElement cancelButton;
+	
+	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[1]/svg")
+	WebElement crossButton;
+	
+
 	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[4]/button[2]")
 	WebElement nextButton;
 	
 	public LinkFromNetsuitePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+	}
+	
+	public WebElement getCancelButton() {
+		return cancelButton;
+	}
+
+	public WebElement getCrossButton() {
+		return crossButton;
 	}
 	
 	public WebElement getDlName() {
@@ -58,6 +71,10 @@ public class LinkFromNetsuitePage {
 	public WebElement getNextButton() {
 		return nextButton;
 	}
+	
+	public void clickNext() {
+		this.nextButton.click();
+	}
 
 	public void setDlName(String dlName) {
 		this.dlName.sendKeys(dlName);;
@@ -78,29 +95,5 @@ public class LinkFromNetsuitePage {
 	public void setCemEmail(String cemEmail) {
 		this.cemEmail.sendKeys(cemEmail);;
 	}
-	
-	public void submitDetails() {
-		this.nextButton.click();
-	}
-	
-	public HashMap<WebElement, Boolean> isEnabled(){
-		HashMap<WebElement, Boolean> elements = new HashMap<WebElement, Boolean>();
-		elements.put(this.dlName, this.dlName.isEnabled());
-		elements.put(this.dlEmail, this.dlEmail.isEnabled());
-		elements.put(this.cemEmail,this.cemEmail.isEnabled());
-		elements.put(this.cemName, this.cemName.isEnabled());
-		elements.put(this.clientName, this.clientName.isEnabled());
-		return elements;
-	}
-	
-	public HashMap<WebElement, Boolean> isDisplayed(){
-		HashMap<WebElement, Boolean> elements = new HashMap<WebElement, Boolean>();
-		elements.put(this.dlName, this.dlName.isDisplayed());
-		elements.put(this.dlEmail, this.dlEmail.isDisplayed());
-		elements.put(this.cemEmail,this.cemEmail.isDisplayed());
-		elements.put(this.cemName, this.cemName.isDisplayed());
-		elements.put(this.clientName, this.clientName.isDisplayed());
-		return elements;
-	}
-	
+
 }

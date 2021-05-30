@@ -3,12 +3,15 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="com.automation.tests.LoginTest">
+      <class name="com.automation.tests.OtherDetailsTest">
         <methods>
           <include name="loginAssertions"/>
+          <include name="checkRequiredField"/>
           <include name="beforeTest"/>
+          <include name="otherDetailsAssertions"/>
+          <include name="homePageAssertions"/>
         </methods>
-      </class> <!-- com.automation.tests.LoginTest -->
+      </class> <!-- com.automation.tests.OtherDetailsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

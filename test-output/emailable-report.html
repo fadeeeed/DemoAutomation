@@ -31,99 +31,31 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Add Project</td><td class="numi">4</td><td class="numi">4</td><td class="numi">0</td><td class="numi_attn">3</td><td class="numi">51.5 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Add Project</td><td class="numi">4</td><td class="numi">4</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">46.5 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
 <tr><th colspan="4">Add Project &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="3">com.automation.tests.OtherDetailsTest</td><td><a href="#m1"><b>loginAssertions</b>  </a></td><td class="numi">1</td><td>1622390812944</td><td class="numi">10009</td></tr><tr class="failedodd"><td><a href="#m2"><b>homePageAssertions</b>  </a></td><td class="numi">1</td><td>1622390822955</td><td class="numi">19178</td></tr><tr class="failedodd"><td><a href="#m3"><b>otherDetailsAssertions</b>  </a></td><td class="numi">1</td><td>1622390844969</td><td class="numi">1798</td></tr>
+<tr class="failedodd"><td rowspan="1">com.automation.tests.OtherDetailsTest</td><td><a href="#m1"><b>otherDetailsAssertions</b>  </a></td><td class="numi">1</td><td>1622397523156</td><td class="numi">2403</td></tr>
 <tr><th colspan="4">Add Project &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="4">com.automation.tests.OtherDetailsTest</td><td><a href="#m4"><b>isDisplayed</b>  </a></td><td class="numi">1</td><td>1622390842135</td><td class="numi">182</td></tr><tr class="passedodd"><td><a href="#m5"><b>isEnabled</b>  </a></td><td class="numi">1</td><td>1622390842319</td><td class="numi">68</td></tr><tr class="passedodd"><td><a href="#m6"><b>fieldAssertions</b>  </a></td><td class="numi">1</td><td>1622390842387</td><td class="numi">1727</td></tr><tr class="passedodd"><td><a href="#m7"><b>checkRequiredField</b>  </a></td><td class="numi">1</td><td>1622390844115</td><td class="numi">852</td></tr>
+<tr class="passedodd"><td rowspan="4">com.automation.tests.OtherDetailsTest</td><td><a href="#m2"><b>loginAssertions</b>  </a></td><td class="numi">1</td><td>1622397495856</td><td class="numi">4534</td></tr><tr class="passedodd"><td><a href="#m3"><b>homePageAssertions</b>  </a></td><td class="numi">1</td><td>1622397500394</td><td class="numi">17660</td></tr><tr class="passedodd"><td><a href="#m4"><b>linkNetsuiteAssertions</b>  </a></td><td class="numi">1</td><td>1622397518056</td><td class="numi">3553</td></tr><tr class="passedodd"><td><a href="#m5"><b>checkRequiredField</b>  </a></td><td class="numi">1</td><td>1622397521610</td><td class="numi">1538</td></tr>
 </table>
 <h1>Add Project</h1>
 <h2 id="m1">com.automation.tests.OtherDetailsTest:otherDetailsAssertions</h2>
 <div style="padding-left:3em">
 <p>The following asserts failed:
-EHI Yes Button is not visible, Date is not selected properly</p>
+Date is not selected properly</p>
 org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:37)
-<br/>at com.automation.tests.OtherDetailsTest.otherDetailsAssertions(OtherDetailsTest.java:38)
+<br/>at com.automation.tests.OtherDetailsTest.otherDetailsAssertions(OtherDetailsTest.java:51)
 <br/>25 lines not shown
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">com.automation.tests.OtherDetailsTest:loginAssertions</h2>
-<div style="padding-left:3em">
-<p>Loggin Unsuccessful expected [https://stage-engage.3pillarglobal.com/projects] but found [https://stage-engage.3pillarglobal.com/login]</p>
-org.testng.Assert.fail(Assert.java:94)
-<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
-<br/>at org.testng.Assert.assertEquals(Assert.java:123)
-<br/>at org.testng.Assert.assertEquals(Assert.java:176)
-<br/>at com.automation.tests.LoginTest.loginAssertions(LoginTest.java:28)
-<br/>at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<br/>at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-<br/>at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-<br/>at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-<br/>at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-<br/>at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-<br/>at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-<br/>at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-<br/>at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-<br/>at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-<br/>at org.testng.TestRunner.privateRun(TestRunner.java:767)
-<br/>at org.testng.TestRunner.run(TestRunner.java:617)
-<br/>at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-<br/>at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-<br/>at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-<br/>at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-<br/>at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-<br/>at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-<br/>at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-<br/>at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-<br/>at org.testng.TestNG.run(TestNG.java:1031)
-<br/>at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-<br/>at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-<br/>at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-<br/>1 lines not shown
-</div>
+<h2 id="m2">com.automation.tests.OtherDetailsTest:homePageAssertions</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">com.automation.tests.OtherDetailsTest:homePageAssertions</h2>
-<div style="padding-left:3em">
-<p>The following asserts failed:
-Title Doesn&apos;t Match</p>
-org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:37)
-<br/>at com.automation.tests.HomePageTest.homePageAssertions(HomePageTest.java:26)
-<br/>at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<br/>at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-<br/>at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-<br/>at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-<br/>at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-<br/>at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-<br/>at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-<br/>at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-<br/>at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-<br/>at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-<br/>at org.testng.TestRunner.privateRun(TestRunner.java:767)
-<br/>at org.testng.TestRunner.run(TestRunner.java:617)
-<br/>at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-<br/>at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-<br/>at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-<br/>at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-<br/>at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-<br/>at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-<br/>at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-<br/>at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-<br/>at org.testng.TestNG.run(TestNG.java:1031)
-<br/>at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-<br/>at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-<br/>at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-<br/>1 lines not shown
-</div>
+<h2 id="m3">com.automation.tests.OtherDetailsTest:loginAssertions</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">com.automation.tests.OtherDetailsTest:fieldAssertions</h2>
+<h2 id="m4">com.automation.tests.OtherDetailsTest:checkRequiredField</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">com.automation.tests.OtherDetailsTest:checkRequiredField</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">com.automation.tests.OtherDetailsTest:isEnabled</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m7">com.automation.tests.OtherDetailsTest:isDisplayed</h2>
+<h2 id="m5">com.automation.tests.OtherDetailsTest:linkNetsuiteAssertions</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

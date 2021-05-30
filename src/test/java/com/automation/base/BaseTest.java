@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 import org.openqa.selenium.WebDriver;
-
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import org.testng.annotations.BeforeSuite;
@@ -24,8 +24,8 @@ public class BaseTest {
 	
 	@BeforeTest
 	public void beforeTest() {
-		System.setProperty("webdriver.gecko.driver","C:\\geckodriver.exe");
-		driver = new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver","C:\\ChromeDriver\\chromedriver.exe");
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get(properties.getProperty("url"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

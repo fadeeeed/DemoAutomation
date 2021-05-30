@@ -8,8 +8,21 @@ import org.openqa.selenium.support.PageFactory;
 public class OtherDetailsPage {
 	private WebDriver driver;
 	
+	
+	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[3]/div[2]/div[1]/div/div/label[2]/span[1]/span[1]/input")
+	WebElement ehiNo;
+	
 	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[3]/div[2]/div[1]/div/div/label[1]/span[1]/span[1]/input")
 	WebElement ehiYes;
+	
+	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[3]/div[2]/div[2]/div/div/label[2]/span[1]/span[1]/input")
+	WebElement earNo;
+	
+	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[3]/div[2]/div[2]/div/div/label[1]/span[1]/span[1]/input")
+	WebElement earYes;
+	
+	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[3]/div[2]/div[3]/div[1]/div/label[1]/span[1]/span[1]/input")
+	WebElement sustained;
 	
 	@FindBy(name="ehiExemptionReason")
 	WebElement exemptionReason;
@@ -23,6 +36,15 @@ public class OtherDetailsPage {
 	@FindBy(xpath="/html/body/div[3]/div[2]/div/div[2]/button[2]")
 	WebElement currentDate;
 	
+	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[4]/button[2]")
+	WebElement previousButton;
+	
+	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[4]/button[1]")
+	WebElement cancelButton;
+	
+	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[1]/svg")
+	WebElement crossButton;
+	
 	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[4]/button[3]")
 	WebElement addButton;
 
@@ -31,9 +53,30 @@ public class OtherDetailsPage {
 		PageFactory.initElements(driver, this);
 	}
 	public void setExemptionReason(String exemptionReason) {
-		this.exemptionReason.sendKeys(exemptionReason);;
+		this.exemptionReason.sendKeys(exemptionReason);
 	}
 
+	public WebElement getEhiNo() {
+		return ehiNo;
+	}
+	public WebElement getEarNo() {
+		return earNo;
+	}
+	public WebElement getEarYes() {
+		return earYes;
+	}
+	public WebElement getSustained() {
+		return sustained;
+	}
+	public WebElement getPreviousButton() {
+		return previousButton;
+	}
+	public WebElement getCancelButton() {
+		return cancelButton;
+	}
+	public WebElement getCrossButton() {
+		return crossButton;
+	}
 	public WebElement getEhiYes() {
 		return this.ehiYes;
 	}

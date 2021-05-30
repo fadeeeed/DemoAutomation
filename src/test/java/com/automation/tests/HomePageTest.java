@@ -15,14 +15,10 @@ public class HomePageTest extends LoginTest {
 		HomePage home = new HomePage(driver);
 		SoftAssert soft = new SoftAssert();
 		
-		
-		soft.assertEquals(driver.getTitle(), "ENGAGE", "Title Doesn't Match");
-		
-		
 		Assert.assertEquals(home.getAddNewProductButton().isEnabled(), true, "Add New Product Button Is Not enabled");
 		home.addNewProductButton();
 		
-		soft.assertEquals(driver.getCurrentUrl(), "https://stage-engage.3pillarglobal.com/projects/add", "Url is not Invalid");
+		soft.assertEquals(driver.getCurrentUrl(), "https://stage-engage.3pillarglobal.com/projects/add", "Url is not valid");
 		soft.assertAll();
 		
 	}

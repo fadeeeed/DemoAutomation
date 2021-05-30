@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class EngageProductDetailsPage {
 	private WebDriver driver;
+	
 	@FindBy(name="projectName")
 	WebElement projectName;
 	
