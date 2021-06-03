@@ -38,7 +38,6 @@ public class LinkFromNetsuiteTest extends HomePageTest {
 		netsuite.setCemEmail(cemEmail);
 		soft.assertEquals(netsuite.getCemEmail().getAttribute("value"),cemEmail,"CemEmail is not set");
 		
-		//soft.assertEquals(netsuite.getCrossButton().isEnabled(), true, "Cross button is not clickable");
 		
 		soft.assertEquals(netsuite.getCancelButton().isEnabled(), true, "Cancel button is not clickable");
 		

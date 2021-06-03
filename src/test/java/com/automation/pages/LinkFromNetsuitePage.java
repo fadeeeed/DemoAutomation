@@ -24,14 +24,10 @@ public class LinkFromNetsuitePage {
 	@FindBy(name="cemEmail")
 	WebElement cemEmail;
 	
-	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[4]/button[1]")
+	@FindBy(xpath="//*[contains(text(), 'CANCEL')]")
 	WebElement cancelButton;
 	
-	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[1]/svg")
-	WebElement crossButton;
-	
-
-	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[4]/button[2]")
+	@FindBy(xpath="//*[contains(text(), 'NEXT')]")
 	WebElement nextButton;
 	
 	public LinkFromNetsuitePage(WebDriver driver) {
@@ -43,10 +39,6 @@ public class LinkFromNetsuitePage {
 		return cancelButton;
 	}
 
-	public WebElement getCrossButton() {
-		return crossButton;
-	}
-	
 	public WebElement getDlName() {
 		return this.dlName;
 	}

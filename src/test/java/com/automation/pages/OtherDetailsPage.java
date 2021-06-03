@@ -12,7 +12,7 @@ public class OtherDetailsPage {
 	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[3]/div[2]/div[1]/div/div/label[2]/span[1]/span[1]/input")
 	WebElement ehiNo;
 	
-	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[3]/div[2]/div[1]/div/div/label[1]/span[1]/span[1]/input")
+	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[3]/div[2]/div[1]/div/div[1]/label[1]/span[1]/span[1]/input")
 	WebElement ehiYes;
 	
 	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[3]/div[2]/div[2]/div/div/label[2]/span[1]/span[1]/input")
@@ -33,20 +33,19 @@ public class OtherDetailsPage {
 	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[3]/div[2]/div[3]/div[3]/span/div/div/input")
 	WebElement dateWidget;
 	
-	@FindBy(xpath="/html/body/div[3]/div[2]/div/div[2]/button[2]")
+	@FindBy(xpath="//*[contains(text(), 'OK')]")
 	WebElement currentDate;
 	
-	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[4]/button[2]")
+	@FindBy(xpath="//*[contains(text(), 'PREVIOUS')]")
 	WebElement previousButton;
 	
-	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[4]/button[1]")
+	@FindBy(xpath="//*[contains(text(), 'CANCEL')]")
 	WebElement cancelButton;
 	
-	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[1]/svg")
-	WebElement crossButton;
-	
-	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[4]/button[3]")
+	@FindBy(xpath="//*[contains(text(), 'ADD')]")
 	WebElement addButton;
+	
+	
 
 	public OtherDetailsPage(WebDriver driver) {
 		this.driver = driver;
@@ -73,9 +72,6 @@ public class OtherDetailsPage {
 	}
 	public WebElement getCancelButton() {
 		return cancelButton;
-	}
-	public WebElement getCrossButton() {
-		return crossButton;
 	}
 	public WebElement getEhiYes() {
 		return this.ehiYes;

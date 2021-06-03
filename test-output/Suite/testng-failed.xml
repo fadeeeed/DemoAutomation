@@ -5,8 +5,12 @@
     <classes>
       <class name="com.automation.tests.OtherDetailsTest">
         <methods>
+          <include name="loginAssertions"/>
+          <include name="checkRequiredField"/>
           <include name="beforeTest"/>
           <include name="otherDetailsAssertions"/>
+          <include name="homePageAssertions"/>
+          <include name="linkNetsuiteAssertions"/>
         </methods>
       </class> <!-- com.automation.tests.OtherDetailsTest -->
     </classes>

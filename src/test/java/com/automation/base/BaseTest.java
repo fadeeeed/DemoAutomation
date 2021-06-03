@@ -6,9 +6,7 @@ import java.util.logging.Logger;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
 import com.automation.config.ConfigFileReader;

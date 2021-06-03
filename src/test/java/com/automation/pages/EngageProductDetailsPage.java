@@ -17,17 +17,15 @@ public class EngageProductDetailsPage {
 	@FindBy(name="sponsorEmail")
 	WebElement sponsorEmail;
 	
-	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[4]/button[3]")
+	@FindBy(xpath="//*[contains(text(), 'NEXT')]")   
 	WebElement nextButton;
 	
-	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[4]/button[1]")
+	@FindBy(xpath="//*[contains(text(), 'CANCEL')]")
 	WebElement cancelButton;
 	
-	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[4]/button[2]")
+	@FindBy(xpath="//*[contains(text(), 'PREVIOUS')]")
 	WebElement previousButton;
 	
-	@FindBy(xpath="/html/body/div[2]/div[2]/div/div[1]/svg")
-	WebElement crossButton;
 	
 	
 	public EngageProductDetailsPage(WebDriver driver) {
@@ -42,11 +40,6 @@ public class EngageProductDetailsPage {
 	public WebElement getPreviousButton() {
 		return previousButton;
 	}
-
-	public WebElement getCrossButton() {
-		return crossButton;
-	}
-
 
 	public WebElement getProjectName() {
 		return projectName;

@@ -34,7 +34,6 @@ public class EngageProductDetailsTest extends LinkFromNetsuiteTest {
 		
 		soft.assertEquals(engage.getPreviousButton().isEnabled(), true, "Previous button is not clickable");
 		
-		//soft.assertEquals(engage.getCrossButton(), true, "Cross Button is not clickable");
 		
 		Assert.assertEquals(engage.getNextButton().isEnabled(), true,"Next button is not clickable");
 		

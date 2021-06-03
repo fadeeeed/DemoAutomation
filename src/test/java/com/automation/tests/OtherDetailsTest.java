@@ -41,7 +41,6 @@ public class OtherDetailsTest extends EngageProductDetailsTest {
 		
 		soft.assertEquals(other.getCancelButton().isEnabled(), true, "Cancel button is not clickable");
 		
-		//soft.assertEquals(other.getCrossButton(), true, "Cross button is not clickable");
 		
 		soft.assertEquals(other.getPreviousButton().isEnabled(), true, "Previous button is not clickable");
 		

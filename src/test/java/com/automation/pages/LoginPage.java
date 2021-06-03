@@ -8,11 +8,8 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -27,7 +24,7 @@ public class LoginPage {
 	
 	private WebDriver driver;
 	
-	@FindBy(xpath="/html/body/div/div[1]/div/div/div[2]/button")
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/div/div[2]/button")
 	WebElement loginToEngage;
 	
 	@FindBy(id="identifierId")

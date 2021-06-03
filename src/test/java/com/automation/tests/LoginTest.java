@@ -1,9 +1,7 @@
 package com.automation.tests;
 
-import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.automation.base.BaseTest;
